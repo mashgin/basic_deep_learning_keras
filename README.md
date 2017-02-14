@@ -40,7 +40,7 @@ Train our network with this data:
 ```python
 model.train_on_batch(imgs_train, label_train)
 ```
-###Testing
+### Testing
 
 Every couple iterations test our net:
 
@@ -78,15 +78,16 @@ Then we just `.add` the layers we want to define our neural net architecture.
 
 A basic description of the layers:
 
-* Convolution2d → extracting information of parts of an image and passing this information to different parts of the image
-* Activation → what part of the image is important? for example where are my white parts of the image?
-* MaxPooling2D → downsize my image (compression)
-* Dropout → make sure your network is not becoming bias.
+* Convolution2d → extracting local image information 
+* Activation → evaluate information relevance (in our case is it a white part of the image?)
+* MaxPooling2D → image compression
+* Dropout → avoiding bias
 * Flatten → reformat  
-* Dense → gather all the information of all the image. And take all of it into consideration. (fully connected layer)
+* Dense → evaluate global image information (fully connected layer)
+* Softmax → 'normalize' information
 
 
-And last but not least this defines how our network should learn: 
+And last but not least this defines how our network should learn, which we use when training: 
 
 ```
 	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
