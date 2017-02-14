@@ -1,6 +1,6 @@
 # Basic introduction to Deep Leanring with Keras
 
-Get a neural net trained in 2 steps!
+Get a neural net trained in 3 steps!
 
 
 ## Step 1 Installation
