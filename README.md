@@ -40,6 +40,7 @@ Train our network with this data:
 ```python
 model.train_on_batch(imgs_train, label_train)
 ```
+###Testing
 
 Every couple iterations test our net:
 
@@ -56,7 +57,7 @@ Here we initialize our neural net :
 model = Sequential()
 ```
 
-Then we just `.add` the layers we want in whatever order we want.
+Then we just `.add` the layers we want to define our neural net architecture.
 
 ```
 	model.add(Convolution2D(16, 5, 5, border_mode='valid', input_shape=(n_rows, n_cols, 1)))
