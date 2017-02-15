@@ -6,9 +6,8 @@ Get a neural net trained in 3 steps!
 ## Step 1 Installation
 
 * if you do not have pip : 
-    * for mac : `easy_install pip`
-    * for ubuntu : 
-    	* pip : ` apt-get update && apt-get -y install python-pip`
+    * mac : `easy_install pip`
+    * ubuntu : ` apt-get update && apt-get -y install python-pip`
 	
 * opencv (for visualization): 
 	* ubuntu : ` sudo apt-get install libopencv-dev python-opencv`
