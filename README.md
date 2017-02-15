@@ -2,6 +2,8 @@
 
 **Big picture**:  Train a neural net with the keras framwork to classify images of circles and square :
 
+![c1](img_examples/circle.png) ![s1](img_examples/square2.png) ![s2](img_examples/square3.png) ![c2](img_examples/circle_2.png)
+
 
 **The goal**: Train the net to classify with an accuracy of 100%.
 
