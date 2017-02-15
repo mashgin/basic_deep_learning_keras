@@ -27,7 +27,7 @@ Get a neural net trained and classifying in 3 steps!
 
 ## Step 3 Classify
 
-* `python keras_train.py c`
+* `python keras_train.py c` ('q' to quit out of it)
 
 ## Understanding
 
