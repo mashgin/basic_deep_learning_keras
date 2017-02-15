@@ -10,11 +10,15 @@ Get a neural net trained in 3 steps!
 * install keras and tensor flow :  ` pip install tensorflow keras`
 
 * for visualization : `pip install opencv-python` 
+
+* clone the git repo : `git clone`
  
 * to silence the annoying, useless warnings : `export TF_CPP_MIN_LOG_LEVEL=1`
 
 
 ## Step 2 Train
+
+* change into the folder : `cd basic_seep_learning_keras`
 
 * `./keras_train.py` 
 
