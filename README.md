@@ -5,20 +5,20 @@ Get a neural net trained and classifying in 3 steps!
 
 ## Step 1 Installation
 
-* for easy installation, pip : 
+* for easy installation: pip : 
     * ubuntu : ` apt-get update && apt-get -y install python-pip`
     * mac : `easy_install pip`
 	
-* for visualization, opencv: 
+* for visualization: opencv: 
 	* ubuntu : ` sudo apt-get install libopencv-dev python-opencv`
 	* mac : `pip install opencv-python`
 	
-* for saving the network, h5py :
+* for saving the network: h5py:
 	* `sudo pip install h5py`
 
-* install keras and tensor flow :  ` pip install tensorflow keras`
+* install keras and tensor flow:  ` pip install tensorflow keras`
  
-* to silence the annoying, useless warnings : `export TF_CPP_MIN_LOG_LEVEL=1`
+* to silence the annoying, useless warnings: `export TF_CPP_MIN_LOG_LEVEL=1`
 
 
 ## Step 2 Train
