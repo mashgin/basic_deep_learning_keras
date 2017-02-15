@@ -31,8 +31,6 @@
 
 * `sudo pip install h5py`
 
-* install keras and tensor flow ->  ` sudo pip install tensorflow keras`
-
 * `brew tap homebrew/science`
 
 * `brew install opencv`
