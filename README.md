@@ -1,6 +1,6 @@
 # Your first deep neural network in less than 5 minutes.
 
-**Big picture**:  Train a neural net with the keras framwork to classify images of circles and square :
+**Big picture**:  Train a neural net with the keras framwork to classify images of circles and squares :
 
 ![c1](img_examples/circle.png) ![s1](img_examples/square3.png)  ![c2](img_examples/circ_1.png) ![s4](img_examples/square3.png) ![c3](img_examples/circle_2.png) ![s2](img_examples/square.png) ![s3](img_examples/square2.png)  
 
