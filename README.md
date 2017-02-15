@@ -11,7 +11,7 @@ Get a neural net trained in 3 steps!
 
 * for visualization : `pip install opencv-python` 
 
-* clone the git repo : `git clone`
+* clone the git repo : `git clone https://github.com/mashgin/basic_deep_learning_keras.git`
  
 * to silence the annoying, useless warnings : `export TF_CPP_MIN_LOG_LEVEL=1`
 
