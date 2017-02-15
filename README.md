@@ -11,6 +11,8 @@
 
 * [Installation] (https://github.com/mashgin/basic_deep_learning_keras/blob/master/installation.md)
 
+* `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
+
 
 ## Step 2 Train
 
