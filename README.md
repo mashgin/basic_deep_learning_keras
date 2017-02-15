@@ -15,7 +15,7 @@ Get a neural net trained in 3 steps!
 
 * *install git?? `sudo apt-get install git-all`*
 
-* *clone the git repo : `git clone https://github.com/mashgin/basic_deep_learning_keras.git` ???*
+* clone the git repo : `git clone https://github.com/mashgin/basic_deep_learning_keras.git` ???
  
 * to silence the annoying, useless warnings : `export TF_CPP_MIN_LOG_LEVEL=1`
 
