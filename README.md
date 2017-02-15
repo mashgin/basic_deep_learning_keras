@@ -83,7 +83,7 @@ Then we just `.add` the layers we want to define our neural net architecture.
 A basic description of the layers:
 
 * Convolution2d → extracting local image information 
-* Activation → evaluate information relevance (in our case is it a white part of the image?)
+* Activation → evaluate information relevance
 * MaxPooling2D → image compression
 * Dropout → avoiding bias
 * Flatten → reformat  
