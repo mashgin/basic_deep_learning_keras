@@ -6,14 +6,15 @@ Get a neural net trained in 3 steps!
 ## Step 1 Installation
 
 * for easy installation, pip : 
-    * mac : `easy_install pip`
     * ubuntu : ` apt-get update && apt-get -y install python-pip`
+    * mac : `easy_install pip`
 	
 * for visualization, opencv: 
 	* ubuntu : ` sudo apt-get install libopencv-dev python-opencv`
 	* mac : `pip install opencv-python`
-* to save the network, h5py :
-	* sudo pip install h5py
+	
+* for saving the network, h5py :
+	* `sudo pip install h5py`
 
 * install keras and tensor flow :  ` pip install tensorflow keras`
  
@@ -22,12 +23,13 @@ Get a neural net trained in 3 steps!
 
 ## Step 2 Train
 
-* `python keras_train.py` 
+* `python keras_train.py t` 
 
-* for visualization:  ` python keras_train.py 1 ` (press on any key for next image)
+## Step 3 Classify
 
+* `python keras_train.py c`
 
-## Step 3 Understand
+## Understanding
 
 **Big picture**:  we train, then test our neural net. **The goal**: a net which classifies with an accuracy of 100%
 
