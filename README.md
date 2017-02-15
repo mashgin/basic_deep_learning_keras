@@ -5,13 +5,15 @@ Get a neural net trained in 3 steps!
 
 ## Step 1 Installation
 
-* if you do not have pip : 
+* for easy installation, pip : 
     * mac : `easy_install pip`
     * ubuntu : ` apt-get update && apt-get -y install python-pip`
 	
-* opencv (for visualization): 
+* for visualization, opencv: 
 	* ubuntu : ` sudo apt-get install libopencv-dev python-opencv`
 	* mac : `pip install opencv-python`
+* to save the network, h5py :
+	* sudo pip install h5py
 
 * install keras and tensor flow :  ` pip install tensorflow keras`
  
