@@ -85,7 +85,7 @@ A basic description of the layers:
 * Dropout → avoiding bias
 * Flatten → reformat  
 * Dense → evaluate global image information (fully connected layer)
-* Softmax → 'normalize' information
+
 
 
 And last but not least this defines how our network should learn, which we use when training: 
@@ -95,8 +95,6 @@ And last but not least this defines how our network should learn, which we use w
 ```
 
 
-
-[backprop](https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
 
 
 
