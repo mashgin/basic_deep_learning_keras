@@ -8,6 +8,8 @@ from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Convolution2D, MaxPooling2D
 from keras.utils import np_utils
 from keras import backend as K
+from keras.models import load_model
+
 
 np.random.seed(1337)
 n_rows, n_cols, n_ch  = 100, 100, 1
@@ -88,8 +90,11 @@ def GetBatch(batch_size):
 	return np.array(batch_labels).reshape(batch_size, 1), np.array(batch_images)
 
 
-if __name__ == '__main__':
+def train():
 
+	'''
+		Train the neural net and test the accuracy every couple iterations
+	'''
 
 	model = GetModel()
 
@@ -97,18 +102,6 @@ if __name__ == '__main__':
 	batch_size = 64
 	test_interval = 20
 	test_size = 100
-
-	'''
-	visualization setup
-	'''
-	vis_dictionary = {0:"circle",1:"square"}
-	if len(sys.argv) == 2:
-		visualize = True 
-		test_size = 10
-	else:
-		visualize = False
-
-	
 
 	for it in range(n_iter):
 		print '\rIteration:', it,
@@ -127,24 +120,64 @@ if __name__ == '__main__':
 			imgs_test = imgs.reshape(test_size, n_rows, n_cols, 1)
 			labels_test = np_utils.to_categorical(labels, n_classes)
 
-			if visualize:
-				'''
-				 To visualize we will let the net predict single images 
-				'''
-				score = model.predict_on_batch(imgs_test)
+			score = model.test_on_batch(imgs_test, labels_test)
+			print  "Accuracy:{0:.0f}%\n".format( score[1]*100)
 
-				counter = 0
-				for i,l in zip(imgs,labels):
+	model.save('weights.h5')
 
-					print("prediction vs. actual: \t {} {}".format(vis_dictionary[score[counter].argmax()],vis_dictionary[l[0]]))
-					ShowImage(i)
-					counter+= 1
-			else:
-				'''
-					If we are not visualizing we are simply testing our net on a batch of data
-				'''
-				score = model.test_on_batch(imgs_test, labels_test)
-				print  "Accuracy:{0:.0f}%\n".format( score[1]*100)
+
+def classify():
+
+	'''
+		Load the trained network
+	'''
+	model = load_model('weights.h5')
+
+	vis_dictionary = {0:"circle",1:"square"}
+
+	'''
+		Get an image, let the network  predict what it is, 
+		output the image and the prediciton
+	'''
+
+	while(True):
+		
+		label, img = GetBatch(1)
+		img_test = img.reshape(1, n_rows, n_cols, 1)
+		label_test = np_utils.to_categorical(label, n_classes)
+
+		score = model.predict_on_batch(img_test)
+
+		img2 = np.zeros((50, 100, 1), dtype='uint8')
+
+		
+		cv2.putText(img2,str(vis_dictionary[score[0].argmax()]),(2,45),cv2.FONT_HERSHEY_PLAIN , 1, 255,1)
+		cv2.putText(img2,"PREDICTION: ",(2,25),cv2.FONT_HERSHEY_PLAIN , 1, 255,1)
+
+
+		img = np.array(img * 255, dtype='uint8').reshape(n_rows, n_cols, n_ch)
+		img2 = np.concatenate((img, img2), axis=0)
+
+
+
+		cv2.imshow("red",img2)
+
+		if cv2.waitKey(0)== 113:
+			break
+
+
+
+if __name__ == '__main__':
+
+	if len(sys.argv) == 2 and sys.argv[1] == 't':
+		train()
+	elif len(sys.argv) == 2 and sys.argv[1] == 'c':
+		classify()
+	else: 
+		print "please specify if you want to 'train : t' or 'classify: c' "
+
+
+
 
 			
 
