@@ -21,8 +21,6 @@
 
 * install python with brew : `brew install python`
 
-* *add to path: *
-
 * `hash -r python`
 
 * `sudo pip install tensorflow keras`
