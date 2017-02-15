@@ -1,7 +1,7 @@
-# Basic introduction to Deep Leanring with Keras
+# Your first deep neural network in less than 5 minutes.
 
 Get a neural net trained and classifying in 3 steps!
-
+change to be a short intro with images
 
 ## Step 1 Installation
 
