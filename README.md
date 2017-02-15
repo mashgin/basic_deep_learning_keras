@@ -5,24 +5,28 @@ Get a neural net trained in 3 steps!
 
 ## Step 1 Installation
 
-* if you do not have pip : `sudo easy_install pip`
+* if you do not have pip : 
+    * for mac : `easy_install pip`
+    * for ubuntu : ` apt-get update && apt-get -y install python-pip`
 
 * install keras and tensor flow :  ` pip install tensorflow keras`
 
 * for visualization : `pip install opencv-python` 
 
-* clone the git repo : `git clone https://github.com/mashgin/basic_deep_learning_keras.git`
+* *install git?? `sudo apt-get install git-all`*
+
+* *clone the git repo : `git clone https://github.com/mashgin/basic_deep_learning_keras.git` ???*
  
 * to silence the annoying, useless warnings : `export TF_CPP_MIN_LOG_LEVEL=1`
 
 
 ## Step 2 Train
 
-* change into the folder : `cd basic_seep_learning_keras`
+* *change into the folder : `cd basic_seep_learning_keras` ???*
 
-* `./keras_train.py` 
+* `python keras_train.py` 
 
-* for visualization:  `./keras_train.py 1 ` (press on any key for next image)
+* for visualization:  ` python keras_train.py 1 ` (press on any key for next image)
 
 
 ## Step 3 Understand
