@@ -1,7 +1,10 @@
 # Your first deep neural network in less than 5 minutes.
 
-Get a neural net trained and classifying in 3 steps!
-change to be a short intro with images
+**Big picture**:  Train a neural net with the keras framwork to classify black and white images of circles and square such as these (on your own machine):
+
+
+**The goal**: Train the net to classify with an accuracy of 100%.
+
 
 ## Step 1 Installation
 
@@ -18,7 +21,7 @@ change to be a short intro with images
 
 ## Understanding
 
-**Big picture**:  we train, then test our neural net. **The goal**: a net which classifies with an accuracy of 100%
+
 
 ### Training 
 
