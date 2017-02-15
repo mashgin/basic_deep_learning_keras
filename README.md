@@ -1,6 +1,6 @@
 # Your first deep neural network in less than 5 minutes.
 
-**Big picture**:  Train a neural net with the keras framwork to classify black and white images of circles and square such as these (on your own machine):
+**Big picture**:  Train a neural net with the keras framwork to classify images of circles and square :
 
 
 **The goal**: Train the net to classify with an accuracy of 100%.
