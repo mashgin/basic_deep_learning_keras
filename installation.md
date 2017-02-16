@@ -15,8 +15,6 @@
 
 * clean install brew → install [brew](https://brew.sh)
 
- 	* if you've previously used brew you might need to clean install by removing brew first:  `rm -rf /usr/local/*`
-
 * python and opencv → `brew tap homebrew/science` and `brew install python opencv `
 
 * use the python we just installed → `hash -r python`
