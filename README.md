@@ -23,7 +23,7 @@
 
 ## Step 3 Classify
 
-* run  `python keras_train.py c` classify your images. Press `spacebar` for next image and press `q` to quit.
+* run  `python keras_train.py c` to classify your images. Press `spacebar` for next image and press `q` to quit.
 
 ## Understanding
 
@@ -98,7 +98,7 @@ And last but not least this defines how our neural net should learn, which we ne
 	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 ```
 
-If this tutorial got you excited about deep learning I recomend you start of looking into this [tutorial](http://adilmoujahid.com/posts/2016/06/introduction-deep-learning-python-caffe/) or the keras [documentation](https://keras.io). For those of you who have more time and would like a good read here's a good [book](http://neuralnetworksanddeeplearning.com/) . 
+If this tutorial got you excited about deep learning I recommend you start of looking into this [tutorial](http://adilmoujahid.com/posts/2016/06/introduction-deep-learning-python-caffe/) or the keras [documentation](https://keras.io). For those of you who have more time and would like a good read here's a good [book](http://neuralnetworksanddeeplearning.com/) . 
 
 
 
