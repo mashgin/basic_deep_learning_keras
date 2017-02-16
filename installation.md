@@ -32,14 +32,15 @@
 
 * `pip install keras opencv-python`
 
-* install [git](https://git-scm.com/download/win)
-
 * change backend for keras to theano
 
 	* open ` c:\Users\<username>\.keras\keras.json`
 
 	* change `tensorflow` to `theano`
 	
+
+* install [git](https://git-scm.com/download/win)
+
 * `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
 
 
