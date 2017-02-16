@@ -98,7 +98,7 @@ def train():
 
 	model = GetModel()
 
-	n_iter = 201
+	n_iter = 61
 	batch_size = 64
 	test_interval = 20
 	test_size = 100
