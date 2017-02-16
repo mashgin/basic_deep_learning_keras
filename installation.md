@@ -1,5 +1,5 @@
 
-### Installation for Ubuntu
+# Ubuntu
 
 
 * easy installation: pip → ` apt-get update && apt-get -y install python-pip`
@@ -11,12 +11,12 @@
 
 * deep learning library →  ` pip install tensorflow keras`
  
-* silence annoying, useless warnings → `export TF_CPP_MIN_LOG_LEVEL=2`
+* silence warnings → `export TF_CPP_MIN_LOG_LEVEL=2`
 
 * `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
 
 
-### Installation for mac
+# Mac
 
 * easy installation → install [brew](https://brew.sh)
 
@@ -37,12 +37,12 @@
 
 	* `brew install opencv`
 
-* silence annoying, useless warnings → `export TF_CPP_MIN_LOG_LEVEL=2`
+* silence warnings → `export TF_CPP_MIN_LOG_LEVEL=2`
 
 * `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
 
 
-### Installation for windows
+# Windows
 
 * download and install [anaconda](https://www.continuum.io/downloads)
 
@@ -55,6 +55,7 @@
 	* open ` c:\Users\<username>\.keras\keras.json`
 
 	* change `tensorflow` to `theano`
+	
 * `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
 
 
