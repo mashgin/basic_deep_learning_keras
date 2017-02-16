@@ -1,45 +1,54 @@
-
 # Ubuntu
 
 
-* easy installation: pip → ` apt-get update && apt-get -y install python-pip libopencv-dev python-opencv`
+Easy installation:
 
-* deep learning library →  `sudo  pip install tensorflow keras h5py`
- 
-* silence warnings → `export TF_CPP_MIN_LOG_LEVEL=2`
+```sh
+# Install pip and OpenCV
+apt-get update && apt-get -y install python-pip libopencv-dev python-opencv
 
-* `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
+# Install the deep learning libraries
+sudo pip install tensorflow keras h5py
 
+# Silence irrelevant warnings
+export TF_CPP_MIN_LOG_LEVEL=2
+
+# Clone the tuturial repo
+git clone https://github.com/mashgin/basic_deep_learning_keras.git
+```
 
 # Mac
 
-* clean install brew → install [brew](https://brew.sh)
+First, make sure you have [Homebrew](https://brew.sh) installed. Then run the following:
 
-* python and opencv → `brew tap homebrew/science` and `brew install python opencv `
+```sh
+# Install OpenCV
+brew tap homebrew/science
+brew install python opencv
 
-* use the python we just installed → `hash -r python`
+# Use the Python we just installed
+hash -r python
 
-* silence warnings → `export TF_CPP_MIN_LOG_LEVEL=2`
+# Silence irrelevant warnings
+export TF_CPP_MIN_LOG_LEVEL=2
 
-* `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
-
+# Clone the tuturial repo
+git clone https://github.com/mashgin/basic_deep_learning_keras.git 
+```
 
 # Windows
 
-* download and install [anaconda](https://www.continuum.io/downloads)
+* First download and install [Anaconda](https://www.continuum.io/downloads).
 
-* `pip install keras opencv-python`
+* In the Anaconda terminal, install OpenCV and Keras: `pip install keras opencv-python`
 
-* change backend for keras to theano
+* Change backend for Keras to Theano
 
-	* open ` c:\Users\<username>\.keras\keras.json`
+	* Open `c:\Users\<username>\.keras\keras.json`
 
-	* change `tensorflow` to `theano`
-	
+	* Change `tensorflow` to `theano`
+* Make sure [Git](https://git-scm.com/download/win) is installed.
 
-* install [git](https://git-scm.com/download/win)
-
-* `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
-
+* Clone the tuturial repo: `git clone https://github.com/mashgin/basic_deep_learning_keras.git`
 
 
