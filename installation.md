@@ -43,6 +43,15 @@
 
 * download and install [anaconda](https://www.continuum.io/downloads)
 
-* `pip install tf keras opencv-python`
+* `pip install keras opencv-python`
+
+* install [git](https://git-scm.com/download/win)
+
+* change backend for keras to theano
+
+	* open ` c:\Users\<username>\.keras\keras.json`
+
+	* change `tensorflow` to `theano`
+
 
 
