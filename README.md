@@ -16,14 +16,14 @@
 
 ## Step 2 Train
 
-* `python keras_train.py t`	(this might take a minute to finish)
+* `python keras_train.py t`	this might take a minute to finish
 
 
 
 
 ## Step 3 Classify
 
-* `python keras_train.py c`	(press `q` to quit out of it)
+* `python keras_train.py c`	press `q` to quit out of it
 
 ## Understanding
 
