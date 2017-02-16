@@ -4,7 +4,7 @@
 
 ![c1](img_examples/circle.png) ![s1](img_examples/square3.png)  ![c2](img_examples/circ_1.png) ![s4](img_examples/square3.png) ![c3](img_examples/circle_2.png) ![s2](img_examples/square.png) ![s3](img_examples/square2.png)  
 
-**The goal**: Train the net to classify with a high accuracy.
+
 
 
 ## Step 1 Installation
@@ -16,18 +16,14 @@
 
 ## Step 2 Train
 
-* `python keras_train.py t`	
-
-* this might take a minute to finish
+* run `python keras_train.py t`	to train your network. This might take a minute to finish.
 
 
 
 
 ## Step 3 Classify
 
-* `python keras_train.py c`	
-
-* press spacebar for next image and press `q` to quit out of classification
+* run  `python keras_train.py c` classify your images. Press `spacebar` for next image and press `q` to quit.
 
 ## Understanding
 
@@ -35,7 +31,8 @@
 
 ### Training 
 
-Create our data :
+Here we create our data, images of cirles and squares with random dimensions.
+
 ```python
 if cls == 0:
 		cv2.circle(img, (n_cols/2, n_rows/2), random.randint(10, n_cols/2 - 10), (255), -1)
@@ -43,14 +40,14 @@ elif cls == 1:
 		side = random.randint(10, n_cols/2 - 10)
 		cv2.rectangle(img, (n_cols/2 - side, n_cols/2 - side), (n_cols/2 + side, n_cols/2 + side), (255), -1)
 ```
-Train our network with this data:
+Then we train our neural net with the created data.
 
 ```python
 model.train_on_batch(imgs_train, label_train)
 ```
 ### Testing
 
-Every couple iterations test our net:
+Every couple iterations we test our neural net and calculate it's accuracy up to this point.
 
 ```python
 score = model.test_on_batch(imgs_test, labels_test)
@@ -59,13 +56,13 @@ print  "Accuracy:{0:.0f}%\n".format( score[1]*100)
 
 ### The Net 
 
-Here we initialize our neural net :
+Before we can train and classify we need to create our neural net. 
 
 ```
 model = Sequential()
 ```
 
-Then we just `.add` the layers we want to define our neural net architecture.
+Then we just `.add` the layers we want to have in our neural net. In other words, define our neural net architecture.
 
 ```
 	model.add(Convolution2D(16, 5, 5, border_mode='valid', input_shape=(n_rows, n_cols, 1)))
@@ -84,7 +81,7 @@ Then we just `.add` the layers we want to define our neural net architecture.
 	model.add(Activation('softmax'))
 ```
 
-A basic description of the layers:
+Here's just a short description of the layers used in this neural net:
 
 * Convolution2d → extracting local image information 
 * Activation → evaluate information relevance
@@ -95,13 +92,13 @@ A basic description of the layers:
 
 
 
-And last but not least this defines how our network should learn, which we use when training: 
+And last but not least this defines how our neural net should learn, which we need for training: 
 
 ```
 	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 ```
 
-
+If this tutorial got you excited about deep learning I recomend you start of looking into this [tutorial](http://adilmoujahid.com/posts/2016/06/introduction-deep-learning-python-caffe/). For those of you who have more time and would like a good read here's a good [book](http://neuralnetworksanddeeplearning.com/) . 
 
 
 
