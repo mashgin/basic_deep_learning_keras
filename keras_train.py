@@ -178,7 +178,7 @@ def classify():
 		'''
 			Show prediction with fancy image pop up, 'q' to quit
 		'''
-		cv2.imshow("red",img2)
+		cv2.imshow("image ",img2)
 		if cv2.waitKey(0)== 113: 
 			break
 
