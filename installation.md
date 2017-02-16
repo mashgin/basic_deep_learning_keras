@@ -39,4 +39,10 @@
 
 * silence annoying, useless warnings → `export TF_CPP_MIN_LOG_LEVEL=2`
 
+### Installation for windows
+
+* download [anaconda](https://www.continuum.io/downloads)
+
+* pip install tf keras opencv-python
+
 
