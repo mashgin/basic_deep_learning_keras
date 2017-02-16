@@ -9,9 +9,9 @@
 
 ## Step 1 Installation
 
-* [Installation] (https://github.com/mashgin/basic_deep_learning_keras/blob/master/installation.md)
+* Go ahead and [install](https://github.com/mashgin/basic_deep_learning_keras/blob/master/installation.md) everything you need 
 
-* `git clone https://github.com/mashgin/basic_deep_learning_keras.git` 
+
 
 
 ## Step 2 Train
@@ -27,7 +27,7 @@
 
 * `python keras_train.py c`	
 
-* press `q` to quit out of it
+* press spacebar for next image and press `q` to quit out of classification
 
 ## Understanding
 
