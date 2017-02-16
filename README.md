@@ -4,7 +4,7 @@
 
 ![c1](img_examples/circle.png) ![s1](img_examples/square3.png)  ![c2](img_examples/circ_1.png) ![s4](img_examples/square3.png) ![c3](img_examples/circle_2.png) ![s2](img_examples/square.png) ![s3](img_examples/square2.png)  
 
-**The goal**: Train the net to classify with an accuracy of 100%.
+**The goal**: Train the net to classify with a high accuracy.
 
 
 ## Step 1 Installation
