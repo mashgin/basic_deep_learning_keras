@@ -16,12 +16,12 @@
 
 ## Step 2 Train
 
-* `python -U keras_train.py t`
+* `python keras_train.py t`
 
 
 ## Step 3 Classify
 
-* `python -U keras_train.py c` ('q' to quit out of it)
+* `python keras_train.py c` ('q' to quit out of it)
 
 ## Understanding
 
