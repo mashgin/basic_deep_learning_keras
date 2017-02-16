@@ -41,8 +41,8 @@
 
 ### Installation for windows
 
-* download [anaconda](https://www.continuum.io/downloads)
+* download and install [anaconda](https://www.continuum.io/downloads)
 
-* pip install tf keras opencv-python
+* `pip install tf keras opencv-python`
 
 
