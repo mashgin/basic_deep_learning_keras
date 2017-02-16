@@ -16,11 +16,12 @@ n_rows, n_cols, n_ch  = 100, 100, 1
 n_classes = 2
 
 # ========= Model ========
-'''
-Neural Net layers definitions
-'''
 
 def GetModel():
+	
+	'''
+		Defining Neural Net layers 
+	'''
 	model = Sequential()
 	model.add(Convolution2D(16, 5, 5, border_mode='valid', input_shape=(n_rows, n_cols, 1)))
 	model.add(Activation('relu'))
@@ -42,16 +43,6 @@ def GetModel():
 	return model
 # ========================
 
-
-
-def ShowImage(img):
-	'''
-		Since incoming image is normalized to 0-1 (float) range, 
-		multiply it with 255 and convert to uint8 for display purposes
-	'''
-	img = np.array(img * 255, dtype='uint8').reshape(n_rows, n_cols, n_ch)
-	cv2.imshow("Image", img)
-	return cv2.waitKey(0)
 
 def GetSample():
 	'''
@@ -106,23 +97,40 @@ def train():
 	for it in range(n_iter):
 		print '\rIteration:', it,
 
+		'''
+			Get a batch of data (batch_size many images with corresponding labels)
+		'''
 		label_train, imgs_train = GetBatch(batch_size)
 		imgs_train = imgs_train.reshape(batch_size, n_rows, n_cols, 1)
 		label_train = np_utils.to_categorical(label_train, n_classes)
 
+		'''
+			train the neureal net with this batch of data
+		'''
 		model.train_on_batch(imgs_train, label_train)
 
 
 		if it % test_interval == 0:
 		
 			print '\nTesting...\n',
+			
+			'''
+				Get a batch of data to test on 
+			'''
+			
 			labels, imgs = GetBatch(test_size)
 			imgs_test = imgs.reshape(test_size, n_rows, n_cols, 1)
 			labels_test = np_utils.to_categorical(labels, n_classes)
 
+			'''
+				evaluate how well the neural net alraedy classifies this batch of data
+			'''
 			score = model.test_on_batch(imgs_test, labels_test)
 			print  "Accuracy:{0:.0f}%\n".format( score[1]*100)
 
+	'''
+		Save to file for later use
+	'''
 	model.save('weights.h5')
 
 
@@ -133,6 +141,9 @@ def classify():
 	'''
 	model = load_model('weights.h5')
 
+	'''
+		For fancy output
+	'''
 	vis_dictionary = {0:"circle",1:"square"}
 
 	'''
@@ -142,27 +153,33 @@ def classify():
 
 	while(True):
 		
+		'''
+			Get data (images )
+		'''
 		label, img = GetBatch(1)
 		img_test = img.reshape(1, n_rows, n_cols, 1)
 		label_test = np_utils.to_categorical(label, n_classes)
 
+		'''
+			Predict whats in the image with our neural net
+		'''
 		score = model.predict_on_batch(img_test)
 
+		'''
+			create fancy window pop up 
+		'''
 		img2 = np.zeros((50, 100, 1), dtype='uint8')
-
-		
 		cv2.putText(img2,str(vis_dictionary[score[0].argmax()]),(2,45),cv2.FONT_HERSHEY_PLAIN , 1, 255,1)
 		cv2.putText(img2,"PREDICTION: ",(2,25),cv2.FONT_HERSHEY_PLAIN , 1, 255,1)
-
-
 		img = np.array(img * 255, dtype='uint8').reshape(n_rows, n_cols, n_ch)
 		img2 = np.concatenate((img, img2), axis=0)
 
-
-
+		
+		'''
+			Show prediction with fancy image pop up, 'q' to quit
+		'''
 		cv2.imshow("red",img2)
-
-		if cv2.waitKey(0)== 113:
+		if cv2.waitKey(0)== 113: 
 			break
 
 
