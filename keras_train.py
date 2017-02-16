@@ -96,6 +96,7 @@ def train():
 
 	for it in range(n_iter):
 		print '\rIteration:', it,
+		sys.stdout.flush()
 
 		'''
 			Get a batch of data (batch_size many images with corresponding labels)
