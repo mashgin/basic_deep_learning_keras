@@ -97,7 +97,7 @@ If this tutorial got you excited about deep learning I recommend you start of lo
 
 ## About
 
-This tutorial was created by [Amelie Frossle](https://github.com/ameliefroessl), an intern and now deep-learning-expert at Mashgin.
+This tutorial was created by [Amelie Froessl](https://github.com/ameliefroessl), an intern and now deep-learning-expert at Mashgin.
 
 <img src="img_examples/mashgin.png" style="width: 200px;"/>
 
