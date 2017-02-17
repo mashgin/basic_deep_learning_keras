@@ -55,13 +55,13 @@ print  "Accuracy:{0:.0f}%\n".format( score[1]*100)
 
 Before we can train and classify we need to create our neural net. [→](keras_train.py#L25)
 
-```
+```python
 model = Sequential()
 ```
 
 Then we just `.add` the layers we want to have in our neural net. In other words, define our neural net architecture. [→](keras_train.py#L26)
 
-```
+```python
 model.add(Convolution2D(16, 5, 5, border_mode='valid', input_shape=(n_rows, n_cols, 1)))
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2,2)))
@@ -89,12 +89,22 @@ Here's just a short description of the layers used in this neural net:
 
 And last but not least, this defines how our neural net should learn, which we need for training: [→](keras_train.py#L41)
 
-```
+```python
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 ```
 
 If this tutorial got you excited about deep learning I recommend you start of looking into this [tutorial](http://adilmoujahid.com/posts/2016/06/introduction-deep-learning-python-caffe/) or the keras [documentation](https://keras.io). For those of you who have more time and would like a good read here's a good [book](http://neuralnetworksanddeeplearning.com/) . 
 
+## About
 
+This tutorial was created by [Amelie Frossle](https://github.com/ameliefroessl), an intern and now deep-learning-expert at Mashgin.
+
+<img src="img_examples/mashgin.png" style="width: 200px;"/>
+
+At [Mashgin](http://www.mashgin.com), we're creating better human experiences through visual automation. We work on lots of cool stuff in many industries. If you're interested, [drop us a line](mailto:contact@mashgin.com) or check out our [hiring page](http://mashgin.com/jobs.html).
+
+### License
+
+This tutorial is licensed under the MIT License. See [LICENSE](LICENSE) for more details. Feel free to clone, fork, or use any parts of the tutorial as long as they are attributed.
 
  
